@@ -71,6 +71,8 @@ sudo cp action.d/telegram-notify.conf /etc/fail2ban/action.d/telegram-notify.con
 
 ```
     /etc/fail2ban/action.d/telegram-notify.conf
+```
+
 4.  Reload Fail2ban:
 
 ``` bash
