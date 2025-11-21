@@ -68,9 +68,9 @@ sudo cp action.d/telegram-notify.conf /etc/fail2ban/action.d/telegram-notify.con
 
 3.  Edit your bot token & chat ID in:
 
+
 ```
     /etc/fail2ban/action.d/telegram-notify.conf
-
 4.  Reload Fail2ban:
 
 ``` bash
