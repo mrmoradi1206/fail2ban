@@ -1,0 +1,24 @@
+# fail2ban-telegram/jail.local
+# GitHub-safe example (no secrets inside)
+
+[DEFAULT]
+# Ban timing
+bantime  = 10m
+findtime = 10m
+maxretry = 5
+
+# Increase ban time for repeat offenders
+bantime.increment = true
+bantime.factor    = 2
+bantime.maxtime   = 1d
+
+# SSH jail
+[sshd]
+enabled  = true
+port     = ssh
+logpath  = /var/log/auth.log
+backend  = systemd
+
+# Default firewall action + Telegram notification
+action = %(action_)s
+         telegram-notify
